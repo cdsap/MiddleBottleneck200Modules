@@ -38,7 +38,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/cdsap/MiddleBottleneck200Modules
 
           git add .
-          git commit -m "change"
+          git commit -m "change $RANDOM"
           git push origin main
           ./gradlew testDebug
         env:
