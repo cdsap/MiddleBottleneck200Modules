@@ -39,7 +39,7 @@ jobs:
 
           git add .
           git commit -m "change"
-          git push origin mainr
+          git push origin main
           ./gradlew testDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
