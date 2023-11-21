@@ -35,6 +35,8 @@ jobs:
           bash replacer
           git config user.email inaki.seri@gmail.com
           git config user.name "inaki"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/cdsap/MiddleBottleneck200Modules
+
           git add .
           git commit -m "change"
           git push origin mainr
