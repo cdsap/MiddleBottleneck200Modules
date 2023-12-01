@@ -20,7 +20,7 @@ class CompositeBuildPluginAndroidLib : Plugin<Project> {
 
             extensions.configure<com.android.build.gradle.LibraryExtension> {
                 namespace = "com.example.mylibrary91302"
-                compileSdk = 33
+                compileSdk = 34
 
                 defaultConfig {
                     minSdk = 24
