@@ -18,6 +18,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation(project(":layer_4:module_4_145"))
+    implementation(project(":layer_1:module_1_72"))
     implementation(project(":layer_4:module_4_146"))
     implementation(project(":layer_4:module_4_147"))
     implementation(project(":layer_4:module_4_148"))
