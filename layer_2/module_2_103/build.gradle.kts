@@ -3,7 +3,10 @@ plugins {
 }
 
 dependencies {
-    
+    implementation("com.google.auto.value:auto-value-annotations:1.10")
+    kapt("com.google.auto.value:auto-value:1.6.6")
+    implementation("se.ansman.kotshi:api:2.14.0")
+    kapt("se.ansman.kotshi:compiler:2.14.0")
     implementation(project(":layer_1:module_1_72"))
     implementation(project(":layer_1:module_1_82"))
     implementation(project(":layer_1:module_1_73"))
@@ -15,4 +18,3 @@ dependencies {
     implementation(project(":layer_1:module_1_98"))
     implementation(project(":layer_1:module_1_96"))
 }
-        
