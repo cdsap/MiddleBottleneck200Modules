@@ -14,7 +14,7 @@ dependencies {
     implementation("com.google.auto.value:auto-value-annotations:1.10")
     kapt("com.google.auto.value:auto-value:1.6.6")
     implementation("androidx.activity:activity-compose:1.8.1")
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")

@@ -6,7 +6,7 @@ android {
         compose = true
     }
     composeOptions {
-        useLiveLiterals = true
+
         kotlinCompilerExtensionVersion = "1.5.3"
     }
 }

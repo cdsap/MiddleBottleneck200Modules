@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.example.mylibrary91302.R
 import com.performance.theme.MyApplicationTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity2 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
