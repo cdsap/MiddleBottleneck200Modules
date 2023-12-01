@@ -3,7 +3,8 @@ plugins {
 }
 
 dependencies {
-    
+    implementation("com.google.auto.value:auto-value-annotations:1.10")
+    kapt("com.google.auto.value:auto-value:1.6.6")
     implementation(project(":layer_0:module_0_24"))
     implementation(project(":layer_0:module_0_7"))
     implementation(project(":layer_0:module_0_25"))
@@ -30,4 +31,3 @@ dependencies {
     implementation(project(":layer_0:module_0_37"))
     implementation(project(":layer_0:module_0_43"))
 }
-        
