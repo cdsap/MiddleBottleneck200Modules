@@ -4,8 +4,6 @@ on:
   push:
     branches: [ main]
   pull_request:
-  schedule:
-      - cron: '0 * * * *' # Runs at 12:00 UTC every day
 
 concurrency:
   group: build-${{ github.ref }}
@@ -32,14 +30,6 @@ jobs:
 
       - name: Execute assemble
         run: |
-          bash replacer
-          git config user.email inaki.seri@gmail.com
-          git config user.name "inaki"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/cdsap/MiddleBottleneck200Modules
-
-          git add .
-          git commit -m "change $RANDOM"
-          git push origin main
           ./gradlew testDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
