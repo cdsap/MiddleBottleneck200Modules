@@ -1,10 +1,24 @@
 plugins {
   id("awesome.androidapp.plugin")
 }
-
+android {
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        useLiveLiterals = true
+        kotlinCompilerExtensionVersion = "1.5.3"
+    }
+}
 dependencies {
-    
+    implementation("androidx.activity:activity-compose:1.8.1")
+    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
     implementation(project(":layer_4:module_4_145"))
+    implementation(project(":layer_1:module_1_72"))
     implementation(project(":layer_4:module_4_146"))
     implementation(project(":layer_4:module_4_147"))
     implementation(project(":layer_4:module_4_148"))
@@ -65,4 +79,3 @@ dependencies {
     implementation(project(":layer_4:module_4_203"))
     implementation(project(":layer_4:module_4_204"))
 }
-        

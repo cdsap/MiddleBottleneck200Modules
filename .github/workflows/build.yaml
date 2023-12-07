@@ -4,8 +4,6 @@ on:
   push:
     branches: [ main]
   pull_request:
-  schedule:
-      - cron: '0 * * * *' # Runs at 12:00 UTC every day
 
 concurrency:
   group: build-${{ github.ref }}
@@ -32,15 +30,13 @@ jobs:
 
       - name: Execute assemble
         run: |
-          bash replacer
-          git config user.email inaki.seri@gmail.com
-          git config user.name "inaki"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/cdsap/MiddleBottleneck200Modules
+          pax=$PWD
+          curl -s -L -O https://github.com/gradle/gradle-enterprise-build-validation-scripts/releases/download/v2.5.1/gradle-enterprise-gradle-build-validation-2.5.1.zip && unzip -q -o gradle-enterprise-gradle-build-validation-2.5.1.zip
+          ls
+          cd gradle-enterprise-gradle-build-validation
+          ls
+          ./03-validate-local-build-caching-different-locations.sh -r https://github.com/cdsap/MiddleBottleneck200Modules.git -b tests_kapt -t assembleDebug
 
-          git add .
-          git commit -m "change $RANDOM"
-          git push origin main
-          ./gradlew testDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
 

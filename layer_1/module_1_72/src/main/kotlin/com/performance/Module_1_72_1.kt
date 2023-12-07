@@ -1,10 +1,15 @@
 package com.performance
 
+import android.os.Parcel
+import android.os.Parcelable
+import com.google.auto.value.AutoValue
+
+
 class Module_1_72_1 {
     fun module_1_72_1() : String {
         val value = "Module_1_72_1"
         println("module_1_72")
-        
+
         val dependencyClass0 = com.performance.Module_0_9_10().module_0_9_10()
         println(dependencyClass0)
         val dependencyClass1 = com.performance.Module_0_32_5().module_0_32_5()
@@ -33,3 +38,10 @@ class Module_1_72_1 {
         return value
     }
 }
+
+@AutoValue abstract class Foo : Parcelable {
+    fun alo() : String {
+return "A"
+    }
+}
+

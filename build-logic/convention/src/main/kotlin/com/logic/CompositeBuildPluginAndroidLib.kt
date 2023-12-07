@@ -14,12 +14,13 @@ class CompositeBuildPluginAndroidLib : Plugin<Project> {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
                 apply("kotlin-kapt")
+                apply("kotlin-parcelize")
             }
 
 
             extensions.configure<com.android.build.gradle.LibraryExtension> {
                 namespace = "com.example.mylibrary91302"
-                compileSdk = 33
+                compileSdk = 34
 
                 defaultConfig {
                     minSdk = 24
@@ -50,7 +51,7 @@ class CompositeBuildPluginAndroidLib : Plugin<Project> {
             }
 
             dependencies {
-
+                add("kapt","com.ryanharter.auto.value:auto-value-parcel:0.2.8")
                 add("implementation", "androidx.core:core-ktx:1.9.0")
                 add("implementation", "androidx.appcompat:appcompat:1.6.1")
                 add("implementation", "com.google.android.material:material:1.8.0")
