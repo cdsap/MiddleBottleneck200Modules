@@ -35,7 +35,7 @@ jobs:
           ls
           cd gradle-enterprise-gradle-build-validation
           ls
-          ./03-validate-local-build-caching-different-locations.sh -r file://$PWD -b tests_kapt -t assembleDebug
+          ./03-validate-local-build-caching-different-locations.sh -r https://github.com/cdsap/MiddleBottleneck200Modules.git -b tests_kapt -t assembleDebug
 
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
