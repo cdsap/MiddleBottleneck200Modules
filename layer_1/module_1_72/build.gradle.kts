@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask
+import org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask
+
 plugins {
-  id("awesome.androidlib.plugin")
+    id("awesome.androidlib.plugin")
 }
 android {
     buildFeatures {
@@ -44,4 +47,19 @@ dependencies {
     implementation(project(":layer_0:module_0_48"))
     implementation(project(":layer_0:module_0_37"))
     implementation(project(":layer_0:module_0_43"))
+}
+
+tasks.withType<KaptGenerateStubsTask>().configureEach {
+    doLast {
+        println(classpathSnapshotProperties.classpathSnapshotDir.get())
+        classpathSnapshotProperties.classpathSnapshot.forEach {
+            println("1-${it.path}")
+
+        }
+        classpathSnapshotProperties.classpath.forEach {
+            println("2-${it.path}")
+
+        }
+    }
+    println("ldldldldl")
 }
