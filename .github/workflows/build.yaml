@@ -33,6 +33,8 @@ jobs:
           pax=$PWD
           curl -s -L -O https://github.com/gradle/gradle-enterprise-build-validation-scripts/releases/download/v2.5.1/gradle-enterprise-gradle-build-validation-2.5.1.zip && unzip -q -o gradle-enterprise-gradle-build-validation-2.5.1.zip
           ls
+          cd gradle-enterprise-gradle-build-validation
+          ls
           ./03-validate-local-build-caching-different-locations.sh -r file://$PWD -b tests_kapt -t assembleDebug
 
         env:
