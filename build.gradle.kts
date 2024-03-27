@@ -1,3 +1,5 @@
+import com.gradle.enterprise.gradleplugin.testselection.PredictiveTestSelectionProfile
+
 plugins {
     id("com.autonomousapps.dependency-analysis") version "1.21.0"
     id("org.jetbrains.kotlin.jvm") version ("1.9.10") apply false
@@ -12,6 +14,7 @@ allprojects {
     tasks.withType<Test>().configureEach {
         useJUnitPlatform()
         predictiveSelection {
+            profile.set(PredictiveTestSelectionProfile.CONSERVATIVE)
             enabled = true
         }
     }
