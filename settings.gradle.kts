@@ -8,17 +8,18 @@ pluginManagement {
 }
 plugins {
     id("com.gradle.common-custom-user-data-gradle-plugin") version "1.8.1"
-    id("com.gradle.enterprise") version "3.16.2"
+    id("com.gradle.develocity") version "3.18"
 }
-gradleEnterprise {
+
+develocity {
     server = "http://ge.solutions-team.gradle.com"
     allowUntrustedServer = true
     buildScan {
-        capture { isTaskInputFiles = true }
-        isUploadInBackground = false
-        publishAlways()
+        uploadInBackground.set(false)
+        publishing { true}
     }
 }
+
 rootProject.name="project200modules"
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
