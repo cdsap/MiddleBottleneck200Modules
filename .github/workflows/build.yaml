@@ -80,6 +80,6 @@ jobs:
 
       - name: Execute assemble
         run: |
-          ./gradlew testDebug -Dpts.profile=CONSERVATIVE -Dpts.mode=REMAINING_TESTS -Dscan.tag.RELEVANT
+          ./gradlew testDebug -Dpts.profile=CONSERVATIVE -Dpts.mode=REMAINING_TESTS -Dscan.tag.REMAINING_TESTS
         env:
           DEVELOCITY_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
