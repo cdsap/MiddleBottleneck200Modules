@@ -3,10 +3,14 @@ plugins {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
     implementation("com.android.tools.build:gradle:8.1.1")
 }
-
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of("17"))
+    }
+}
 gradlePlugin {
     plugins {
         register("kotlinPlugin") {

@@ -7,8 +7,8 @@ pluginManagement {
     }
 }
 plugins {
-    id("com.gradle.common-custom-user-data-gradle-plugin") version "1.8.1"
-    id("com.gradle.develocity") version "3.18"
+    id("com.gradle.common-custom-user-data-gradle-plugin") version "2.2"
+    id("com.gradle.develocity") version "4.1.1"
 }
 
 develocity {
