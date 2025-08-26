@@ -11,7 +11,7 @@ plugins {
 allprojects {
     tasks.withType<Test>().configureEach {
         useJUnitPlatform()
-        develocity.predictiveSelection {
+        develocity.predictiveTestSelection {
             enabled = true
         }
     }
