@@ -40,7 +40,7 @@ jobs:
           git add .
           git commit -m "change $RANDOM"
           git push origin main
-          ./gradlew clean testDebug -Dpts.profile=CONSERVATIVE  -Dscan.tag.RELEVANT  -Dpts.mode=RELEVANT_TESTS  -Dscan.tag.RELEVANT
+          ./gradlew  testDebug -Dpts.profile=CONSERVATIVE  -Dscan.tag.RELEVANT  -Dpts.mode=RELEVANT_TESTS  -Dscan.tag.RELEVANT
         env:
           DEVELOCITY_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
 
@@ -65,6 +65,6 @@ jobs:
 
       - name: Execute assemble
         run: |
-          ./gradlew clean testDebug -Dpts.profile=CONSERVATIVE -Dpts.mode=REMAINING_TESTS -Dscan.tag.REMAINING_TESTS
+          ./gradlew  testDebug -Dpts.profile=CONSERVATIVE -Dpts.mode=REMAINING_TESTS -Dscan.tag.REMAINING_TESTS
         env:
           DEVELOCITY_ACCESS_KEY: ${{ secrets.GE_TOKEN }}
